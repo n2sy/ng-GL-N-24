@@ -1,0 +1,9 @@
+<p>Cours d'Angular avec les {{ section }} {{ annee }}</p>
+
+<div [hidden]="hd" [style.backgroundColor]="cl">Tek-up</div>
+
+<button (click)="traitement()">Click me</button>
+
+<input [(ngModel)]="section" type="text" />
+
+<app-child [color]="cl"></app-child>
