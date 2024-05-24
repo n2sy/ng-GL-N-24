@@ -6,4 +6,4 @@
 
 <input [(ngModel)]="section" type="text" />
 
-<app-child [color]="cl"></app-child>
+<app-child (childEvent)="lireMessage($event)" [color]="cl"></app-child>

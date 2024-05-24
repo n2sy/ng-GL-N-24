@@ -2,4 +2,4 @@
 <app-first></app-first>
 <hr />
 
-<app-child [color]="'green'"></app-child>
+<app-child (childEvent)="lireMessage2($event)" [color]="'green'"></app-child>
