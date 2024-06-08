@@ -11,9 +11,10 @@ import { DetailsComponent } from './projet/details/details.component';
 import { ItemComponent } from './projet/item/item.component';
 import { DirectComponent } from './direct/direct.component';
 import { ServersComponent } from './servers/servers.component';
+import { CustomDirDirective } from './custom-dir.directive';
 
 @NgModule({
-  declarations: [AppComponent, FirstComponent, ChildComponent, CvComponent, ListeComponent, DetailsComponent, ItemComponent, DirectComponent, ServersComponent],
+  declarations: [AppComponent, FirstComponent, ChildComponent, CvComponent, ListeComponent, DetailsComponent, ItemComponent, DirectComponent, ServersComponent, CustomDirDirective],
   imports: [BrowserModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
