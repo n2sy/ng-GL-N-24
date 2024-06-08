@@ -10,9 +10,10 @@ import { ListeComponent } from './projet/liste/liste.component';
 import { DetailsComponent } from './projet/details/details.component';
 import { ItemComponent } from './projet/item/item.component';
 import { DirectComponent } from './direct/direct.component';
+import { ServersComponent } from './servers/servers.component';
 
 @NgModule({
-  declarations: [AppComponent, FirstComponent, ChildComponent, CvComponent, ListeComponent, DetailsComponent, ItemComponent, DirectComponent],
+  declarations: [AppComponent, FirstComponent, ChildComponent, CvComponent, ListeComponent, DetailsComponent, ItemComponent, DirectComponent, ServersComponent],
   imports: [BrowserModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],

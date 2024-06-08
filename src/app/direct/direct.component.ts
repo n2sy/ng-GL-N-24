@@ -6,8 +6,8 @@ import { Component } from '@angular/core';
   styleUrl: './direct.component.css',
 })
 export class DirectComponent {
-  cl = 'yellow';
-  bg = 'red';
+  cl = 'blue';
+  bg = 'green';
   class1 = true;
   class2 = false;
   class3 = false;
