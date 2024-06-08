@@ -12,9 +12,24 @@ import { ItemComponent } from './projet/item/item.component';
 import { DirectComponent } from './direct/direct.component';
 import { ServersComponent } from './servers/servers.component';
 import { CustomDirDirective } from './custom-dir.directive';
+import { ShortPipe } from './pipes/short.pipe';
+import { FilterPipe } from './pipes/filter.pipe';
 
 @NgModule({
-  declarations: [AppComponent, FirstComponent, ChildComponent, CvComponent, ListeComponent, DetailsComponent, ItemComponent, DirectComponent, ServersComponent, CustomDirDirective],
+  declarations: [
+    AppComponent,
+    FirstComponent,
+    ChildComponent,
+    CvComponent,
+    ListeComponent,
+    DetailsComponent,
+    ItemComponent,
+    DirectComponent,
+    ServersComponent,
+    CustomDirDirective,
+    ShortPipe,
+    FilterPipe,
+  ],
   imports: [BrowserModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],

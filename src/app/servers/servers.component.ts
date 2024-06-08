@@ -21,13 +21,13 @@ export class ServersComponent {
     },
     {
       name: 'Test Development server',
-      type: 'small',
+      type: 'medium',
       date_d: new Date(2020, 4, 4),
       statut: 'stable',
     },
     {
       name: 'Nidhal server',
-      type: 'small',
+      type: 'large',
       date_d: new Date(2020, 4, 4),
       statut: 'offline',
     },
