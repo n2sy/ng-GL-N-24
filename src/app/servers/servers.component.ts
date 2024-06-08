@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   styleUrl: './servers.component.css',
 })
 export class ServersComponent {
+  selectedStatut = '';
   tabServers = [
     {
       name: 'Production server',
