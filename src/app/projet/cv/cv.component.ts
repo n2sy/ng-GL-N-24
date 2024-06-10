@@ -10,11 +10,7 @@ import { GestionCandidatsService } from '../../service/gestion-candidats.service
 })
 export class CvComponent {
   // implements OnInit inutile depuis v14
-  tabCandidats: Candidat[] = [
-    new Candidat(1, 'bart', 'simpson', 23, 'ingénieur', 'bart.jpeg'),
-    new Candidat(2, 'homer', 'simpson', 55, 'designer', 'homer.png'),
-    new Candidat(3, 'lisa', 'simpson', 29, 'directeur', 'lisa.png'),
-  ];
+  tabCandidats: Candidat[] = [];
   selectedCandidat: Candidat;
 
   // Methode 1 injection de dépendances
@@ -25,6 +21,15 @@ export class CvComponent {
 
   ngOnInit() {
     this.candSer.testerService();
+    this.tabCandidats = this.candSer.getAllCandidats();
+  }
+
+  addnewCandidat() {
+    this.candSer.addCandidat();
+  }
+
+  showCandidats() {
+    console.log(this.candSer.getAllCandidats());
   }
 
   recupererCandidat(cand) {
