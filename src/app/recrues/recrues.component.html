@@ -1,0 +1,12 @@
+@if (tabRecrues.length) {
+<div>
+  <h4>Liste des recrues</h4>
+  <ol class="list-group">
+    @for (rec of tabRecrues; track $index) {
+    <app-item [oneCandidat]="rec"></app-item>
+
+    }
+  </ol>
+</div>
+
+}

@@ -1,19 +1,22 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppComponent } from './app.component';
-import { FirstComponent } from './first/first.component';
 import { FormsModule } from '@angular/forms';
+import { AppComponent } from './app.component';
 import { ChildComponent } from './child/child.component';
+import { CustomDirDirective } from './custom-dir.directive';
+import { DirectComponent } from './direct/direct.component';
+import { FirstComponent } from './first/first.component';
+import { HomeComponent } from './home/home.component';
+import { FilterPipe } from './pipes/filter.pipe';
+import { ShortPipe } from './pipes/short.pipe';
 import { CvComponent } from './projet/cv/cv.component';
-import { ListeComponent } from './projet/liste/liste.component';
 import { DetailsComponent } from './projet/details/details.component';
 import { ItemComponent } from './projet/item/item.component';
-import { DirectComponent } from './direct/direct.component';
+import { ListeComponent } from './projet/liste/liste.component';
+import { RecruesComponent } from './recrues/recrues.component';
 import { ServersComponent } from './servers/servers.component';
-import { CustomDirDirective } from './custom-dir.directive';
-import { ShortPipe } from './pipes/short.pipe';
-import { FilterPipe } from './pipes/filter.pipe';
+import { GL_N_ROUTING } from './app.routing';
 
 @NgModule({
   declarations: [
@@ -29,8 +32,10 @@ import { FilterPipe } from './pipes/filter.pipe';
     CustomDirDirective,
     ShortPipe,
     FilterPipe,
+    RecruesComponent,
+    HomeComponent,
   ],
-  imports: [BrowserModule, FormsModule],
+  imports: [BrowserModule, FormsModule, GL_N_ROUTING],
   providers: [],
   bootstrap: [AppComponent],
 })

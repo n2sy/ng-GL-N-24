@@ -1,0 +1,13 @@
+<p>Cours d'angular avec GL-N</p>
+
+<!-- Route statique -->
+<button routerLink="/cv" class="btn btn-primary">Go To CV</button>
+<!-- Route dyanmique -->
+
+<button [routerLink]="['servers']" class="btn btn-danger">Go To Servers</button>
+
+<p>Navigation cote TS</p>
+<button (click)="goToCv()" class="btn btn-warning">Go To CV</button>
+<!-- Route dyanmique -->
+
+<button (click)="goToServers()" class="btn btn-info">Go To Servers</button>
