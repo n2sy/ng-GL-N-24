@@ -17,6 +17,11 @@ import { ListeComponent } from './projet/liste/liste.component';
 import { RecruesComponent } from './recrues/recrues.component';
 import { ServersComponent } from './servers/servers.component';
 import { GL_N_ROUTING } from './app.routing';
+import { NavbarComponent } from './navbar/navbar.component';
+import { InfosComponent } from './infos/infos.component';
+import { AddComponent } from './add/add.component';
+import { EditComponent } from './edit/edit.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +39,11 @@ import { GL_N_ROUTING } from './app.routing';
     FilterPipe,
     RecruesComponent,
     HomeComponent,
+    NavbarComponent,
+    InfosComponent,
+    AddComponent,
+    EditComponent,
+    NotFoundComponent,
   ],
   imports: [BrowserModule, FormsModule, GL_N_ROUTING],
   providers: [],
