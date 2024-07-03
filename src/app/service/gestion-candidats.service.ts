@@ -17,6 +17,9 @@ export class GestionCandidatsService {
       new Candidat(1, 'NEW', 'CANDIDAT', 23, 'ingénieur', 'bart.jpeg')
     );
   }
+  getCandidatById(id) {
+    return this.allCands.find((cand) => cand.id == id);
+  }
 
   getAllCandidats() {
     return this.allCands;
