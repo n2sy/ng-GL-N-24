@@ -21,12 +21,33 @@ export class InfosComponent {
     //console.log(this.activatedRoute.snapshot.params);
     //this.myId = this.activatedRoute.snapshot.params['id'];
     // this.myId = this.activatedRoute.snapshot.paramMap.get('id');
+
     //2eme methode (observable)
     this.activatedRoute.paramMap.subscribe({
       next: (p: ParamMap) => {
-        this.candidat = this.candSer.getCandidatById(p.get('id'));
-        if (!this.candidat) this.router.navigateByUrl('/not-found');
+        this.candSer.getCandidatByIdAPI(p.get('id')).subscribe({
+          next: (response) => {
+            this.candidat = response;
+          },
+          error: (err) => {
+            this.router.navigateByUrl('/not-found');
+          },
+        });
       },
     });
+  }
+
+  onDelete() {
+    if (confirm('Etes vous sur de vouloir supprimer ce candidat?')) {
+      this.candSer.deleteCandidatAPI(this.candidat['_id']).subscribe({
+        next: (response) => {
+          alert(response['message']);
+          this.router.navigateByUrl('/cv');
+        },
+        error: (err) => {
+          console.log(err);
+        },
+      });
+    }
   }
 }

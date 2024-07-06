@@ -15,7 +15,16 @@ export class ListeComponent {
   constructor(private candSer: GestionCandidatsService) {}
 
   ngOnInit() {
-    this.allCandidats = this.candSer.getAllCandidats();
+    this.candSer.getAllCandidatsAPI().subscribe({
+      next: (response: Candidat[]) => {
+        this.allCandidats = response;
+      },
+      error: (err) => {
+        console.log(err);
+        alert('Données fictives');
+        this.allCandidats = this.candSer.getAllCandidats();
+      },
+    });
   }
 
   showCandidats() {

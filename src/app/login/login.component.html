@@ -1,9 +1,13 @@
+@if (showErrorMsg) {
+<div class="alert alert-danger">Login et/ou mot de passe invalide(s)</div>
+
+}
 <form #f="ngForm">
   <label for="">Adresse mail</label>
   <input
     #inpLogin="ngModel"
     ngModel
-    name="login"
+    name="email"
     required
     email
     type="text"
@@ -22,7 +26,7 @@
     type="text"
     class="form-control"
   />
-
+  <!-- 
   <div #infos="ngModelGroup" ngModelGroup="infos">
     <label for="">Langage préféré</label>
     <select [ngModel]="defaultLanguage" name="langage" class="form-control">
@@ -74,7 +78,7 @@
 
   <pre>
     {{ f.value | json }}
-  </pre>
+  </pre> -->
 
   <button (click)="onSubmit(f)" class="btn btn-primary">Se connecter</button>
 </form>
